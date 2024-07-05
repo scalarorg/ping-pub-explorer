@@ -1,0 +1,12 @@
+{
+    "chain_name": "scalar",
+    "api": ["http://localhost:11317"],
+    "rpc": ["http://localhost:21657"],
+    "coingecko": "",
+    "snapshot_provider": "",
+    "sdk_version": "v0.47.5",
+    "coin_type": "118",
+    "min_tx_fee": "500",
+    "addr_prefix": "scalar",
+    "logo": "https://pbs.twimg.com/profile_images/1767489344049455104/8uTqV4ZN_400x400.jpg"
+}
