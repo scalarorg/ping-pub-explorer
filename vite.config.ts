@@ -12,6 +12,10 @@ import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: true, 
+    port: 80,
+  },
   define: {
     'process.env': {}
   },
