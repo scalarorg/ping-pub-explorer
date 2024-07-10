@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y ca-certificates curl
 
 # Copy build artifacts from the builder stage
 COPY --from=builder /$WORKDIR/explorer/dist /usr/share/nginx/html
-
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 ARG BUILD_DATE
 ARG GIT_REVISION
 LABEL build-date=$BUILD_DATE
