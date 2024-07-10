@@ -1,21 +1,14 @@
 version: '3'
 
-networks:
-  scalar-network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.0.10.0/24
-
 services:
-  ping-pub-explorer:
-    networks:
-      scalar-network:
-        ipv4_address: 10.0.10.28
-    image: ping-pub-explorer
-    container_name: ping-pub-explorer
+  explorer:
+    build:
+     context: ../
+     dockerfile: Dockerfile
+    image: evmos/explorer:latest
+    container_name: evmos-explorer
     ports:
-      - "8080:80"
+      - "4000:80"
     logging:
       driver: "json-file"
       options:
